@@ -1,11 +1,16 @@
 from scapy.all import *
 import sys, socket, os
 
-FILE = 'data.csv'
-MY_IP = 'YOUR_LOCAL_IP'
-LOG_COUNT = 1000
-LABEL = 1
-MIN_PACKETS = 3
+FILE = 'data.csv' # Where the data will be appended to
+MY_IP = 'YOUR_LOCAL_IP' # Your local IPv4 address
+LOG_COUNT = 1000 # Total number of packets to collect before processing flows
+MIN_PACKETS = 3 # Minimum number of packets for a valid flow
+LABEL = 1 # Which label this data collection will be saved as:
+# Labels:
+#   1 = web browsing
+#   2 = video streaming
+#   3 = video chatting
+#   4 = data download
 
 def process_packets(packets):
     # 1) Create dictionaries of flows
