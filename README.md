@@ -22,3 +22,7 @@ The features that were observed from the collected flows were:
 1. Destination port
 
 Three separate Machine Learning classifier algorithms were tested: Decision Tree, Neural Network, and Supporting Vector Machine. The models are created and scored ten times for cross validation. It was found that the Decision Tree classifier is by far the most accurate algorithm at around 90% accuracy. The other two algorithms score below 50%. The reason the Decision Tree classifier is the best is likely due to the fact that this data is much more conditionally correlated as opposed to mathematically correlated.
+
+<p align="center">
+  <img src="accuracy.png" width="500">
+</p>
